@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workfinder_v1 | ATSLink</title>
+  <link rel="website icon" type="png" href="https://pic.atserver186.jp/img/ATSERVER/icon.png">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header>
+        <a href="../index.html">
+          <img src="../img/service_logo.png" alt="Workfinder_v1" style="width:150px;height:auto;">
+        </a>
+        <!-- ハンバーガーアイコン（常に前面） -->
+        <div class="menu-toggle" id="menu-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        </div>
+
+        <!-- ご自身のリンクに変更してください -->
+        <nav class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="../index.html">Top</a></li>
+            <li><a href="https://github.com/t-aoki186/workfinder">GitHub</a></li>
+            <li><a href="https://atserver186.jp/">作者ホームページ</a></li>
+            <li><a href="index.html">公式SNS</a></li>
+            <li><a href="https://atserver186.jp/inquiry/">お問い合わせ</a></li>
+        </ul>
+        </nav>
+    </header>
+    
+  <!--もしよければATSERVERのリンク・プロフ共有サービスであるATSLinkでプロフを作成し、作成したプロフのリンクを以下のiframeのsrc内に張り付けてください
+      2025/08/22以前にATSLinkでプロフを作成した方は、target="_blank"設定ができていないので、一つ適当なリンクを追加し削除をすることで表示ページが最新版になります。それが面倒な方は、https://atserver186.jp/inquiry/ にATSERVER IDとともに「Workfinder_v1について」と入力し送信してください。-->
+  <iframe src="https://link.atserver186.jp/Workfinder_v1/" style="width:100%; height:100vh; border:none; min-height:600px; background:#fff;" title="ATSLink Workfinder_v1"></iframe>
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const sidebar = document.getElementById('sidebar');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      sidebar.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

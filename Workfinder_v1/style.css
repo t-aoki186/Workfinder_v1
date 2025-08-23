@@ -1,0 +1,107 @@
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+        
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 30px; /* paddingを含めると実際の高さは50px */
+            display: flex;
+            align-items: center;
+            background-color: rgba(32, 33,36, 0.8); /* 半透明 */
+            backdrop-filter: blur(6px); /* 背景ぼかし */
+            padding: 10px;
+            z-index: 1000; /* ヘッダーを前面に固定 */
+        }
+        /* ハンバーガーボタン（ヘッダーの外） */
+        .menu-toggle {
+        position: fixed;
+        top: 8px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        z-index: 4000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6px;
+        cursor: pointer;
+        background: transparent;
+        }
+
+        .bar {
+        width: 30px;
+        height: 4px;
+        background: #dbdbdb;
+        border-radius: 2px;
+        transition: 0.3s ease;
+        }
+
+        .menu-toggle.active .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .menu-toggle.active .bar:nth-child(2) {
+        transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* サイドバー */
+        .sidebar {
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 250px;
+        height: 100vh; /* Changed to viewport height */
+        background: rgba(32, 33,36, 0.95);
+        box-shadow: -4px 0 10px rgba(0,0,0,0.1);
+        transition: right 0.4s ease;
+        z-index: 2000;
+        padding: 80px 20px 20px;
+        box-sizing: border-box; /* Added for better padding and height management */
+        }
+
+        .sidebar.active {
+        right: 0;
+        }
+
+        .sidebar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        }
+
+        .sidebar ul li {
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(0,0,0,0.1); /* 暗い背景に対してこの区切り線は目立たない可能性があります */
+        font-size: 18px;
+        /* color: #333; この色は暗い背景では読みにくいため、下の a タグのスタイルで上書きされていることを確認してください */
+        }
+        .sidebar ul li a{
+        /* padding: 15px 0; liのpaddingと重複する可能性があります */
+        /* border-bottom: 1px solid rgba(0,0,0,0.1); liに既にborder-bottomがあるため、不要かもしれません */
+        display: block; /* li全体をクリッカブルにする場合など */
+        padding: 15px 0; /* liのpaddingを0にしてこちらで制御する方が良い場合もあります */
+        font-size: 18px;
+        color: #ffffff;
+        text-decoration:none;
+        }
+
+        footer{
+          font-family: 'Noto Sans JP', sans-serif;
+          width: 100%;
+          color: white;
+          background-color: #202124;
+          text-align: center;
+          margin-top: 40px;
+          position: static !important;
+          border-top: #dbdbdb;
+          box-sizing: border-box;
+        }
+
+        .MutualLink{
+          color: #53ACFF;
+        }
+
+        .Link{
+          color: #53ACFF;
+        }

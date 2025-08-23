@@ -1,0 +1,31 @@
+<!--サーバー・ドメインをお持ちでないのであれば、プロフィールページと作品ページでトップページなどの階層が異なるため
+    このようにプロフィールページ用のヘッダーと作品ページ用のヘッダーを用意する必要があります。
+    
+    サーバードメインをお持ちであれば、リンクや画像をhttps://example.com/index.htmlのように指定できるので、
+    ヘッダーは1つ用意すれば正常に動作します。
+    
+    ご自身の環境に合わせてこのheader_f_profile.htmlをheader.htmlなどにしてください。
+    
+    注意：このファイルの名前を変更した場合はプロフィールページや作品ページのファイル読み込みの部分のリンクを正しいものに変更してください。-->
+
+<header>
+        <a href="../../index.html">
+          <img src="../../img/service_logo.png" alt="Workfinder_v1" style="width:150px;height:auto;">
+        </a>
+        <!-- ハンバーガーアイコン（常に前面） -->
+        <div class="menu-toggle" id="menu-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        </div>
+
+        <!-- ご自身のリンクに変更してください -->
+        <nav class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="../../index.html">Top</a></li>
+            <li><a href="https://github.com/t-aoki186/workfinder">GitHub</a></li>
+            <li><a href="https://atserver186.jp/">作者ホームページ</a></li>
+            <li><a href="../../link/index.html">公式SNS</a></li>
+            <li><a href="https://atserver186.jp/inquiry/">お問い合わせ</a></li>
+        </ul>
+        </nav>
+    </header>

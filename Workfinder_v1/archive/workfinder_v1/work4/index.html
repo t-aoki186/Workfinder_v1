@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workfinder_v1 workfinder | 記事3</title>
+    <link rel="website icon" type="png" href="https://pic.atserver186.jp/img/ATSERVER/icon.png">
+    <link
+    rel="stylesheet"
+    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+    crossorigin="anonymous"
+    />
+    <!-- highlight.js VSCode風テーマのみ読み込み -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css"><!-- VSCode風のテーマ -->
+    <link rel="stylesheet" href="../../../work.css"/><!--作品ページ用のスタイルを読み込む-->
+    <link rel="stylesheet" href="../../../style.css"/><!--共通部品のスタイル-->
+
+</head>
+<body>
+
+<!--header-->
+<div id="header"></div>
+
+    <div class="container">
+    <!--ユーザー名-->
+    <div class="user_container">
+        <a href="../index.html" class="user_link">
+            <img src="../img/icon.png">
+            <span>@Workfinder_v1</span>
+        </a>
+    </div>
+    <!--タイトル-->
+    <div class="article_title_container">
+        <h3>記事3</h3>
+    </div>
+    <!--記事内容-->
+    <div class="article_container">
+        <p>
+           <!--
+            <video controls style="width: 100%; height: auto;">
+                <source src="https://pic.atserver186.jp/img/ATSERVER/Service/workfinder/v1/sample.mp4" type="video/mp4">
+                お使いのブラウザはvideoタグをサポートしていません。
+            </video>
+            
+
+            <img src="https://pic.atserver186.jp/img/ATSERVER/Service/workfinder/v1/sample.png" alt="画像" style="width: 100%; height: auto;">
+
+            <audio controls src="https://pic.atserver186.jp/img/ATSERVER/Service/workfinder/v1/sample.wav"></audio>
+
+            <pre><code class="language-html" id="mainCodeBlock">
+              ここにコードを記述
+            </code></pre>
+            <p>※htmlコードを公開する場合は、「<」を「&lt;」に、「>」を「&gt;」に、「"」を「&quot;」に変更してください。</p>
+            -->
+        内容
+        <br>
+        <hr>
+        <br>
+        <p>©workfinder_v1<br>
+        作品の無断転載を禁じます</p>
+
+    </div>
+</div><!--containerのdiv終わり-->
+
+<!--関連する作品に書き換えるのもありかも-->
+<div class="container">
+    <p style="text-align: center;"><big>@Workfinder_v1のほかの作品</big></p>
+  <main>
+        <div class="blog-card">
+    <!--以下の入力内容のようにご自身のリンクを追加してください-->
+    <img src="../work1/image.png" alt="記事サムネイル">
+    <a href="../work1/index.html" >
+          <div class="content">
+          <h2>workfinder_v1について</h2>
+          <p>使い方などについて解説</p>
+          <div class="Group">#workfinder</div>
+          </div>
+        </a>
+      </div>
+      <!--リンク2-->
+      <div class="blog-card">
+        <img src="https://pic.atserver186.jp/img/ATSERVER/Service/workfinder/v1/img.png" alt="記事サムネイル">
+        <a href="../work2/index.html" >
+          <div class="content">
+          <h2>記事1</h2>
+          <p>見出し</p>
+          <div class="Group">#workfinder</div>
+          </div>
+        </a>
+      </div>
+      <!--リンク3-->
+      <div class="blog-card">
+        <img src="https://pic.atserver186.jp/img/ATSERVER/Service/workfinder/v1/img.png" alt="記事サムネイル">
+        <a href="../work3/index.html" >
+          <div class="content">
+          <h2>記事2</h2>
+          <p>見出し</p>
+          <div class="Group">#workfinder</div>
+          </div>
+        </a>
+      </div>
+      <!--リンク4-->
+      <div class="blog-card">
+        <img src="https://pic.atserver186.jp/img/ATSERVER/Service/workfinder/v1/img.png" alt="記事サムネイル">
+        <a href="../work4/index.html" >
+          <div class="content">
+          <h2>記事3</h2>
+          <p>見出し</p>
+          <div class="Group">#workfinder</div>
+          </div>
+        </a>
+      </div>
+      <!--リンク5-->
+      <div class="blog-card">
+        <img src="https://pic.atserver186.jp/img/ATSERVER/Service/workfinder/v1/img.png" alt="記事サムネイル">
+        <a href="../work5/index.html" >
+          <div class="content">
+          <h2>記事4</h2>
+          <p>見出し</p>
+          <div class="Group">#workfinder</div>
+          </div>
+        </a>
+      </div>
+    </main> 
+</div>
+
+<div class="container">
+    <!--パンくずリスト-->
+    <ol class="breadcrumb-001">
+        <li><a href="../../index.html">home</a></li>
+        <li><a href="../index.html">workfinder_v1</a></li>
+        <li>here</li>
+      </ol>
+      <!--パンくずリスト 参考:https://pote-chil.com/css-stock/ja/breadcrumb-->
+</div>
+<br>
+<!--footer-->
+<div id="footer"></div>
+
+<!-- 共通部品の読み込み -->
+<script>
+  // ヘッダーを先に読み込む
+  fetch("../../../header_f_work.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.querySelector("#header").innerHTML = data;
+      // ハンバーガーメニューのイベントを再登録
+      const menuToggle = document.getElementById('menu-toggle');
+      const sidebar = document.getElementById('sidebar');
+      if(menuToggle && sidebar) {
+        menuToggle.addEventListener('click', () => {
+          menuToggle.classList.toggle('active');
+          sidebar.classList.toggle('active');
+        });
+      }
+    });
+  // フッターを読み込む
+  fetch("../../../footer.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.querySelector("#footer").innerHTML = data;
+    });
+    function copyCode() {
+    var code = document.getElementById('mainCodeBlock').textContent;
+    navigator.clipboard.writeText(code).then(function() {
+      alert('コピーされました');
+    }, function() {
+      alert('コピーに失敗しました');
+    });
+ }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+</body>
+</html>

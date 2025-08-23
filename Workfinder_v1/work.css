@@ -1,0 +1,332 @@
+              @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+
+        * {
+            margin: 0;
+        }
+
+          body{
+              font-family: 'Noto Sans JP', sans-serif;
+              background-color: #000000;
+              padding-top: 60px;
+          }
+
+                /*ヘッダーライン*/
+                hr {
+            border: none;
+            border-top: 2px solid rgb(179, 179, 179);
+            width: 100%;
+        }
+        /*ヘッダーライン*/
+
+
+        /* ブログ記事のカード */
+
+        .blog-card {
+            display: flex;
+            flex-direction: row; /* 横並びに変更 */
+            align-items: center;
+            border-bottom: 3px solid #d1d1d1;
+            margin: 15px 0; /* 縦に追加されるように上下マージン */
+            width: 100%; /* カード全体の幅を確保 */
+            overflow: hidden;
+        }
+
+
+        .blog-card img {
+            width: 150px; /* 固定幅 */
+            height: auto;
+            object-fit: cover;
+        }
+
+
+        .blog-card .content {
+          padding: 15px;
+          flex: 1; /* タイトル部分を拡張 */
+        }
+
+
+        /* リンクのスタイルを調整 */
+        .blog-card a {
+            display: block; /* ブロック要素として設定 */
+            width: 100%; /* 横幅をカード全体に固定 */
+            text-decoration: none; /* 下線を削除 */
+            color: inherit; /* 親の文字色を継承 */
+        }
+
+
+        .blog-card h2 {
+            margin: 0 0 10px;
+            font-size: 1.0rem;
+            color: #ffffff;
+        }
+
+
+        .blog-card p {
+          text-align: left;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #ffffff;
+            margin: 0;
+        }
+
+        
+        .blog-card .Group {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #ffffff;
+            margin: 0;
+        }
+
+      /*Dev*/
+      .blog-card h2 {
+        position: relative; /* 必須: ::afterの位置調整に必要 */
+        margin: 0 0 10px;
+        font-size: 1.0rem;
+        color: #ffffff;
+        display: inline-block; /* テキスト内容の幅に限定 */
+      }
+
+      .blog-card h2::after {
+        position: absolute;
+        left: 0;
+        content: '';
+        width: 100%; /* h2のテキスト幅に合わせる */
+        height: 2px;
+        background: #ffffff; /* アンダーラインの色 */
+        bottom: -5px; /* アンダーラインの位置調整 */
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease; /* アニメーションの滑らかさ */
+      }
+
+      .blog-card h2:hover::after {
+        visibility: visible;
+        bottom: 0; /* ホバー時のアンダーライン位置 */
+        opacity: 1;
+      }
+      /*Dev::h2にホバーアニメーションを追加*/
+
+
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 15px;
+            color: white;
+            border: 2px solid #7d7d7d;
+            background-color: #202124; /* ダークテーマに合わせた背景色 */
+            writing-mode: horizontal-tb;
+            text-orientation: mixed;
+            /* 横方向のレイアウトを保つ */
+            display: block;
+        }
+
+        /*ユーザー名*/
+        .user_container{
+            width: 100%;
+            margin: 20px auto; /* 中央配置 */
+            text-align: left; /* 左寄せ */ 
+        }
+
+        .user_link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #ffffff;
+            border-radius: 20px;
+        }
+
+        .user_link img {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+        }
+        /*ユーザー名*/
+
+        .article_title_container{
+            width: 100%;
+            margin: 20px auto; /* 中央配置 */
+            color: white;
+            text-align: left; /* 左寄せ */
+        }
+
+        p{
+            color: white;
+        }
+        
+        /* パンくずリスト */
+        .breadcrumb-001 {
+        display: flex;
+        gap: 0 22px;
+        list-style: none;
+        padding: 0;
+        font-size: .9em;
+        }
+
+        .breadcrumb-001 li {
+        display: flex;
+        align-items: center;
+        }
+
+        .breadcrumb-001 li:first-child::before {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        margin-right: 4px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20 20C20 20.5523 19.5523 21 19 21H5C4.44772 21 4 20 4 20V11L1 11L11.3273 1.6115C11.7087 1.26475 12.2913 1.26475 12.6727 1.6115L23 11L20 11V20ZM11 13V19H13V13H11Z' fill='%23333333'%3E%3C/path%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        content: '';
+        }
+
+        .breadcrumb-001 li:not(:last-child)::after {
+        display: inline-block;
+        transform: rotate(45deg);
+        width: .3em;
+        height: .3em;
+        margin-left: 10px;
+        border-top: 1px solid #333333;
+        border-right: 1px solid #333333;
+        content: '';
+        }
+
+        .breadcrumb-001 a {
+        color: #ffffff;
+        text-decoration: none;
+        }
+        /* パンくずリスト */
+        
+        /*目次*/
+        .toc-005 {
+            width: 100%;
+            margin-bottom: 30px;
+            border-radius: 3px;
+            background-color: #2E2E2E; /* 目次の背景色をダークテーマに合わせました */
+        }
+
+        .toc-005 div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 10px 0;
+            background-color: #2589d0;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        .toc-005 div::before {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            margin-right: 5px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M8 4H21V6H8V4ZM3 3.5H6V6.5H3V3.5ZM3 10.5H6V13.5H3V10.5ZM3 17.5H6V20.5H3V17.5ZM8 11H21V13H8V11ZM8 18H21V20H8V18Z' fill='%23fff'%3E%3C/path%3E%3C/svg%3E");
+            content: '';
+        }
+
+        .toc-005 ol {
+            list-style-type: decimal;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .toc-005 > ol {
+            padding: 1em 1em 1em 3em;
+        }
+
+        .toc-005 ol ol {
+            margin-top: 5px;
+            padding-left: 1.1em;
+        }
+
+        .toc-005 li {
+            padding: 5px 0;
+            font-weight: 600;
+        }
+
+        .toc-005 ol ol li {
+            font-weight: 500;
+            font-size: .9em;
+        }
+
+        .toc-005 a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        /*目次*/
+
+        .language-javascript{
+            background-color: #1f1f1f;
+        }
+
+            @media (max-width: 768px) {
+      .search-form{
+        width: 80vw;
+      }
+
+      .shortcuts_search_btn {
+        font-family: 'Noto Sans JP', sans-serif;
+        width: 80%;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .Group_btn {
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90px;
+        height: 40px;
+        background: #424242;
+        color: #FFF;
+        text-decoration: none;
+        text-align: center;
+        font-size: 11px;
+        line-height: 1.2;
+        padding: 5px;
+      }
+      .shortcuts_search_table_pc{
+        display: none;
+      }
+      .scroll-image{
+        width: 5vh;
+      }
+
+      .blog-card {
+        max-width: 98vw;
+        min-width: 0;
+        padding: 4px 0;
+      }
+      .blog-card img {
+        width: 60px;
+        height: 60px;
+        min-width: 40px;
+        max-width: 80px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+      .blog-card .content {
+        padding: 8px;
+      }
+
+    p.title {
+        font-size: 1.1rem;
+        margin: 10px 0 8px 0;
+    }
+
+      .blog-card p {
+        font-size: 0.7rem;
+      }
+      .blog-card .Group {
+        font-size: 0.7rem;
+      }
+    }

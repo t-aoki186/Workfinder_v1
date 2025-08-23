@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>workfinder_v1</title><!--ご自身のサイト名に差し替えてご利用ください-->
+    <link rel="website icon" type="png" href="https://pic.atserver186.jp/img/ATSERVER/icon.png"><!--ご自身のサイトアイコンに差し替えてご利用ください-->
+    <!--検索アイコン読み込み-->
+    <link rel="stylesheet"
+    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+    crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" href="https://pic.atserver186.jp/js_css/workfinder_v1/pc/popup_c.css"/>
+    <link rel="stylesheet" type="text/css" href="main.css"/>
+</head>
+
+<body>
+
+<!-- ローディング画面 -->
+<div id="loading-overlay" style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:#252525;z-index:9999;display:flex;align-items:center;justify-content:center;flex-direction:column;">
+  <div class="loader-spinner" style="width:48px;height:48px;border:6px solid #eee;border-top:6px solid #4a90e2;border-radius:50%;animation:spin 1s linear infinite;"></div>
+  <div style="margin-top:18px;font-size:1.3rem;color:#ffffff;">読み込み中...</div>
+  <img src="img/Developed_by_ATSERVER.png" alt="Developed by ATSERVER" style="margin-top: 20px; width: 200px; height: auto;">
+</div>
+
+<!-- ポップアップ要素 -->
+<div id="how_to_use_popup" class="common-popup popup-animation">
+  <h1 style="text-align: center;">ポップアップタイトル</h1><!--ポップアップのタイトル-->
+  <div class="tab-bar">
+    <button class="tab-button active" data-tab="tab1">サブタイトル1</button>
+    <button class="tab-button" data-tab="tab2">サブタイトル2</button>
+    <div class="tab-underline"></div>
+  </div>
+  <div class="tab-content" id="tab1"><!--内容ここから-->
+    説明1
+  </div>
+  <div class="tab-content" id="tab2" style="display: none;">
+    説明2
+  </div><!--内容ここまで-->
+  <br>
+  <button id="close_popup" class="popup-close-button">閉じる</button>
+</div>
+<!-- ポップアップ要素 ここまで -->
+
+<!-- トップへ -->
+<a href="#top" class="fixed-btn"><img src="https://pic.atserver186.jp/js_css/workfinder_v1/pagetop_icon.png" class="bp_icon_i"></a>
+
+<!--ヘッダー-->
+<header>
+  <!-- ハンバーガーアイコン（常に前面） -->
+  <div class="menu-toggle" id="menu-toggle">
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+
+  <!-- サイドバー (新しい内容に更新) -->
+  <nav class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="../index.html">workfinder_v1 | home</a></li>
+      <li><a href="https://github.com/t-aoki186/workfinder">GitHub</a></li>
+      <li><a href="https://atserver186.jp/">作者ホームページ</a></li>
+      <li><a href="link/index.html">公式SNS</a></li>
+      <li><a href="#how_to_use" id="how_to_use_link">使用方法</a></li>
+      <li><a href="https://atserver186.jp/inquiry/">お問い合わせ</a></li>
+    </ul>
+  </nav>
+  <!--スクロールされて、search-containerが見えなくなったらheaderに検索欄を表示するやつ-->
+  <div class="search_container_02" id="search_container_02">
+    <img src="img/service_logo.png" style="width: 100px; height: auto;" class="header_logo">
+    <form class="search-form-header" action="search.html" method="GET" onsubmit="return validateSearchForm()">
+      <input class="search-box" type="text" id="searchTerm" name="q" placeholder="検索..." ><!--onblur="blank_alert()"はBeta-->
+      <button class="search-button" type="submit"><i class="fas fa-search"></i></button>
+    </form>
+  </div>
+</header>
+
+<!--ヘッダー・検索フォーム-->
+<div class="main-container">
+  <br>
+  <div class="top-icon">
+    <img src="img/service_logo.png" alt="workfinder_v1" width="400px" height="auto"><!--ご自身のサイトロゴに合わせて画像パスと、サイズを指定してください-->
+  </div><!--logoのdivここでおわり-->
+  <!--検索フォーム-->
+  <div class="search-container">
+    <form class="search-form" action="search.html" method="GET" onsubmit="return validateSearchForm()">
+      <input class="search-box" type="text" id="searchTerm" name="q" placeholder="検索..." ><!--onblur="blank_alert()"はBeta-->
+      <button class="search-button" type="submit"><i class="fas fa-search"></i></button>
+    </form>
+  </div>    
+  <!--検索フォーム-->
+ </div>
+
+<br>
+
+<!--指定の内容で検索してもらいたいときに使えるショートカットボタンです
+    [search.html?q=]　の部分の=の後ろに検索してほしいテキストを入力してください-->
+<table class="shortcuts_search_table_pc">
+  <tr>
+    <td>
+      <a href="search.html?q=検索内容1" class="button type1">入力1</a>
+    </td>
+    <td>
+      <a href="search.html?q=検索内容2" class="button type1">入力2</a>
+    </td>
+    <td>
+      <a href="search.html?q=検索内容3" class="button type1">入力3</a>
+    </td>
+  </tr>
+</table>
+
+<div class="shortcuts_search_btn">
+  <a href="search.html?q=検索内容1" class="Group_btn"><p>入力1</p></a>
+  <a href="search.html?q=検索内容2" class="Group_btn"><p>入力2</p></a>
+  <a href="search.html?q=検索内容3" class="Group_btn"><p>入力3</p></a>
+</div>
+  
+<!--検索フォームのみ必要な場合はここから、「ここまで」とコメントアウトされた場所までのコードを削除してください。-->
+<!--ここから-->
+
+  <!--スクロールを促すための画像
+    ご自身の作成した画像に変更していただいても構いません。-->
+  <img src="img/scroll.png" alt="スクロールしてください" class="scroll-image">
+
+  <!--おすすめ記事などのリンクを記してください-->
+  <div class="container">
+    <div class="title">
+      <h1>おすすめページ</h1>
+    </div>
+    <hr>
+    <main>
+      <!--リンク1-->
+      <div class="blog-card">
+        <!--以下の入力内容のようにご自身のリンクを追加してください-->
+        <img src="archive/workfinder_v1/work1/image.png" alt="記事サムネイル">
+        <a href="archive/workfinder_v1/work1/index.html" >
+          <div class="content">
+          <p class="title">workfinder_v1について</p>
+          <p>使い方などについて解説</p>
+          <div class="Group">#workfinder</div>
+          </div>
+        </a>
+      </div>
+      <!--リンク2-->
+      <div class="blog-card">
+        <img src="https://pic.atserver186.jp/img/ATSERVER/Service/workfinder/v1/img.png" alt="記事サムネイル">
+        <a href="archive/workfinder_v1/work2/index.html" >
+          <div class="content">
+          <p class="title">記事1</p>
+          <p>見出し</p>
+          <div class="Group">#workfinder</div>
+          </div>
+        </a>
+      </div>
+      <!--リンク3-->
+      <div class="blog-card">
+        <img src="https://pic.atserver186.jp/img/ATSERVER/Service/workfinder/v1/img.png" alt="記事サムネイル">
+        <a href="archive/workfinder_v1/work3/index.html" >
+          <div class="content">
+          <p class="title">記事2</p>
+          <p>見出し</p>
+          <div class="Group">#workfinder</div>
+          </div>
+        </a>
+      </div>
+      <!--リンク4-->
+      <div class="blog-card">
+        <img src="https://pic.atserver186.jp/img/ATSERVER/Service/workfinder/v1/img.png" alt="記事サムネイル">
+        <a href="archive/workfinder_v1/work4/index.html" >
+          <div class="content">
+          <p class="title">記事3</p>
+          <p>見出し</p>
+          <div class="Group">#workfinder</div>
+          </div>
+        </a>
+      </div>
+      <!--リンク5-->
+      <div class="blog-card">
+        <img src="https://pic.atserver186.jp/img/ATSERVER/Service/workfinder/v1/img.png" alt="記事サムネイル">
+        <a href="archive/workfinder_v1/work5/index.html" >
+          <div class="content">
+          <p class="title">記事4</p>
+          <p>見出し</p>
+          <div class="Group">#workfinder</div>
+          </div>
+        </a>
+      </div>
+    </main>
+    </div>
+
+    <br>
+    <br>
+
+  <!--ここまで-->
+  <!--検索フォームのみ必要な場合は「ここから」と書かれたコメントアウトからここまで削除してください-->
+
+  <!--フッター-->
+  <hr>
+  <div id="footer"></div>
+
+<!--スクリプト-->
+<script>
+  //共通部品の読み込み
+  //footer
+  fetch("footer.html")//このURLはフッター用のページのパスに合わせて変更してください
+  .then((response) => response.text())
+  .then((data) => document.querySelector("#footer").innerHTML = data);
+  //このページのヘッダーはスクロールされてメインの検索フォームが見えなくなると、
+  // ヘッダー内の検索フォームが表示されるようになっているので、ヘッダーの読み込みはしません。
+
+    //ナビゲーションボタンを格納する処理
+    const menuToggle = document.getElementById('menu-toggle');
+    const sidebar = document.getElementById('sidebar');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      sidebar.classList.toggle('active');
+    });
+
+    //スクロールされた時にヘッダー内の検索フォームを表示させる処理
+    document.addEventListener("DOMContentLoaded", function() {
+        const searchContainer = document.querySelector(".search-container");
+        const searchContainer02 = document.getElementById("search_container_02");
+
+        function toggleSearchBar() {
+            const rect = searchContainer.getBoundingClientRect();
+            if (rect.bottom < 0) {
+                searchContainer02.style.display = "flex"; // 画面から消えたら表示 (flexboxなのでflex)
+            } else {
+                searchContainer02.style.display = "none";  // まだ見えてるなら非表示
+            }
+        }
+
+        window.addEventListener("scroll", toggleSearchBar);
+        toggleSearchBar(); // 初期表示時にも一度実行して状態を正しくする
+    });
+    //ローディング用処理
+    window.addEventListener('load', function() {
+    var overlay = document.getElementById('loading-overlay');
+    if (overlay) overlay.style.display = 'none';
+    });
+  </script>
+
+  <!--外部からスクリプトを読み込む-->
+  <script src="https://pic.atserver186.jp/js_css/workfinder_v1/pc/popup_c.js"></script>
+  <script src="https://pic.atserver186.jp/js_css/workfinder_v1/pc/settings_popup_c.js"></script>
+  <script src="https://pic.atserver186.jp/js_css/workfinder_v1/pc/dark_write_c.js"></script>
+
+</body>
+</html>

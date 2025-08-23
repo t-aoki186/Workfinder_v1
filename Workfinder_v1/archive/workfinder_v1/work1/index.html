@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workfinder_v1 workfinder | 使い方</title>
+    <link rel="website icon" type="png" href="https://pic.atserver186.jp/img/ATSERVER/icon.png">
+    <link
+    rel="stylesheet"
+    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+    crossorigin="anonymous"
+    />
+    <!-- highlight.js VSCode風テーマのみ読み込み -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css"><!-- VSCode風のテーマ -->
+    <link rel="stylesheet" href="../../../work.css"/><!--作品ページ用のスタイルを読み込む-->
+    <link rel="stylesheet" href="../../../style.css"/><!--共通部品のスタイル-->
+
+</head>
+<body>
+
+<!--header-->
+<div id="header"></div>
+
+    <div class="container">
+    <!--ユーザー名-->
+    <div class="user_container">
+        <a href="../index.html" class="user_link">
+            <img src="../img/icon.png">
+            <span>@Workfinder_v1</span>
+        </a>
+    </div>
+    <!--タイトル-->
+    <div class="article_title_container">
+        <h3>Workfinder_v1の使い方</h3>
+    </div>
+    <!--記事内容-->
+    <div class="article_container">
+<p>
+    Workfinder_v1は、HTML・CSS・JavaScriptを用いて開発された、作品の閲覧・検索が可能な汎用サイトです。<br>
+    プロフィールページと作品ページ(ここ)のヘッダー・フッター・CSSは共通化されているため、ご自身の環境に合わせて編集してください。<br>
+    画像のパスやタイトルなどは、各HTMLファイルを直接編集して調整してください。<br><br>
+
+    作品を追加する場合は、<a href="../work2/index.html" class="Link">workfinder_v1/work2/index.html</a>をコピーしてください。<br>
+    ユーザーページを追加する場合は、<a href="../index.html" class="Link">workfinder_v1/index.html</a>をコピーし、プロフィール画像・名前・作品名・サムネイル・作品ファイルなど、必要な情報を入力することで簡単に作成できます。<br>
+    この際、ユーザー名のフォルダは workfinder_v1 の直下ではなく、archive フォルダの直下に配置してください。<br><br>
+
+    Workfinder_v1ではヘッダー・フッターを共通化しているため、HTMLファイルをChromeなどのブラウザで直接開くと、これらが表示されません。<br>
+    そのため、簡易環境では Windows の IIS や XAMPP などのローカルサーバーを、本番環境では Apache・nginx・IIS などのWebサーバーソフトをご利用ください。<br>
+    ※XAMPPは開発用のため、セキュリティ設定が甘く、外部公開には適していません。<br><br>
+
+    検索システムを利用する際は、<a href="../../../search/search.html" class="Link">search.html</a> を VSCode などのエディターで開き、<br>
+    コメントアウトに従って、作品ファイルのパス・サムネイル・タイトル・見出し・検索用キーワードなどを入力してください。<br><br>
+
+    その他の編集可能な箇所については、各HTMLファイル内のコメントアウトをご参照ください。<br><br>
+
+    編集可能なCSSファイルは以下の通りです：<br>
+    <ul>
+        <li><a href="../../../style.css" class="Link">style.css - ヘッダー・フッターなど共通部品のスタイル</a></li>
+        <li><a href="../../../profile.css" class="Link">profile.css - 投稿者ページ用のスタイル</a></li>
+        <li><a href="../../../work.css" class="Link">work.css - 作品一覧ページ用のスタイル（このページ）</a></li>
+    </ul>
+    <br>
+
+    ご不明な点がございましたら、<a href="https://atserver186.jp/inquiry/" class="Link" target="_blank">ATSERVER総合お問い合わせ</a>よりご連絡ください。<br>
+    ※ATSERVERは、Workfinder_v1の開発元ですので、安心してご利用いただけます。<br><br>
+
+    <b>画像・動画・音楽・コードの表示について</b><br><br>
+    デフォルトのCSSでは、以下のように表示されます。<br>
+    作品を追加する際は、VSCodeなどのエディターから以下のコードをコピーしてご利用ください。
+</p>
+        <br>
+        <br>
+        <b>動画</b>
+        <br>
+            <video controls style="width: 100%; height: auto;">
+                <source src="https://pic.atserver186.jp/img/ATSERVER/Service/workfinder/v1/sample.mp4" type="video/mp4">
+                お使いのブラウザはvideoタグをサポートしていません。
+            </video>
+        <br>
+        <br>
+        <b>画像</b>
+        <br>
+            <img src="https://pic.atserver186.jp/img/ATSERVER/Service/workfinder/v1/sample.png" alt="画像" style="width: 100%; height: auto;">
+        <br>
+        <br>
+        <b>音楽</b>
+        <br><br>
+            <audio controls src="https://pic.atserver186.jp/img/ATSERVER/Service/workfinder/v1/sample.wav"></audio>
+        <br>
+        <br>
+        <br>
+        <b>コードと動画・画像・音楽を追加するためのコード</b>
+            <br>
+            <!-- highlight.js CDN -->
+            <pre><code class="language-html" id="mainCodeBlock">&lt;!--動画用--&gt;
+&lt;video controls style=&quot;width: 100%; height: auto;&quot;&gt;
+  &lt;source src=&quot;sample.mp4&quot; type=&quot;video/mp4&quot;&gt;
+  お使いのブラウザはvideoタグをサポートしていません。
+&lt;/video&gt;
+
+&lt;!--画像用--&gt;
+  &lt;img src=&quot;sample.png&quot; alt=&quot;画像&quot; style=&quot;width: 100%; height: auto;&quot;&gt;
+
+&lt;!--音楽用--&gt;
+  &lt;audio controls src=&quot;sample.wav&quot;&gt;&lt;/audio&gt;
+
+&lt;!--コード--&gt;
+  &lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;
+  //ここにコードを記述
+&lt;/code>&lt;/pre&gt;
+
+&lt;!--jsはコードに最初から含まれているため追加する必要はありません。--&gt;
+            </code></pre>
+        <br>
+        <p>※htmlコードを公開する場合は、「<」を「&lt;」に、「>」を「&gt;」に、「"」を「&quot;」に変更してください。</p>
+        <br>
+        <br>
+       <b>Workfinder_v2について</b>
+      <p>
+        Workfinderは、毎年バージョンアップを行っています。<br>
+        次期バージョンであるWorkfinder_v2は、2026年6月下旬に公開予定です。<br>
+        Workfinder_v2で搭載予定の主な機能は以下の通りです。
+        <ul>
+          <li>MediaWikiやWordPressのような汎用的なOSSに対応</li>
+          <li>インストール時に、サイト名・アイコン・デフォルトユーザー・テーマなどを初期設定可能</li>
+          <li>インストール時に設定したユーザー名とパスワードを知っている人が、自分用のアカウントを新規作成できる機能</li>
+          <li>ログインユーザーのみが、専用の投稿フォームを使って文章・画像・動画・音楽・コードなどの作品を投稿・編集・削除できるシステム</li>
+          <li>プロフィールページは「u/profile.php?id=user_name」のような共通URL形式で表示</li>
+          <li>作品ページも同様に「view.php?id=1」のような共通URL形式で表示</li>
+          <li>すべての作品が自動的に検索対象となる検索システム</li>
+          <li>コメント機能</li>
+          <li>「いいね！」機能</li>
+          <li>他の記事を引用できる機能</li>
+          <li>ユーザーがコードを編集することなく、GUI操作のみで完結できるシステム(ただしサーバーセットアップは少し難しくなる)</li>
+        </ul>
+        Workfinder_v2では、v1とは異なりPHPベースで開発されます。<br>
+        また、v2では作品投稿用のアカウントや作品データを保存するために、データベースの利用が必要となります。<br>
+        そのため、Workfinder_v2を利用するには、PHPとMySQLが動作するサーバー環境が必要です。<br>
+        サーバーのセットアップはやや複雑になる可能性がありますが、インストール手順を詳しく解説したブログ記事や動画を公開予定ですので、そちらをご参照ください。<br>
+        インストール手順は、WindowsおよびDebian系Linux環境での設定方法をご紹介します。
+      </p>
+        <hr>
+        <br>
+        <p>©ATSERVER<br>
+        作品の無断転載を禁じます</p>
+
+    </div>
+</div><!--containerのdiv終わり-->
+
+<!--関連する作品に書き換えるのもありかも-->
+<div class="container">
+    <p style="text-align: center;"><big>@Workfinder_v1のほかの作品</big></p>
+  <main>
+      <!--リンク2-->
+      <div class="blog-card">
+        <img src="https://pic.atserver186.jp/img/ATSERVER/Service/workfinder/v1/img.png" alt="記事サムネイル">
+        <a href="../work2/index.html" >
+          <div class="content">
+          <h2>記事1</h2>
+          <p>見出し</p>
+          <div class="Group">#workfinder</div>
+          </div>
+        </a>
+      </div>
+      <!--リンク3-->
+      <div class="blog-card">
+        <img src="https://pic.atserver186.jp/img/ATSERVER/Service/workfinder/v1/img.png" alt="記事サムネイル">
+        <a href="../work3/index.html" >
+          <div class="content">
+          <h2>記事2</h2>
+          <p>見出し</p>
+          <div class="Group">#workfinder</div>
+          </div>
+        </a>
+      </div>
+      <!--リンク4-->
+      <div class="blog-card">
+        <img src="https://pic.atserver186.jp/img/ATSERVER/Service/workfinder/v1/img.png" alt="記事サムネイル">
+        <a href="../work4/index.html" >
+          <div class="content">
+          <h2>記事3</h2>
+          <p>見出し</p>
+          <div class="Group">#workfinder</div>
+          </div>
+        </a>
+      </div>
+      <!--リンク5-->
+      <div class="blog-card">
+        <img src="https://pic.atserver186.jp/img/ATSERVER/Service/workfinder/v1/img.png" alt="記事サムネイル">
+        <a href="../work5/index.html" >
+          <div class="content">
+          <h2>記事4</h2>
+          <p>見出し</p>
+          <div class="Group">#workfinder</div>
+          </div>
+        </a>
+      </div>
+    </main> 
+</div>
+
+<div class="container">
+    <!--パンくずリスト-->
+    <ol class="breadcrumb-001">
+        <li><a href="../../index.html">home</a></li>
+        <li><a href="../index.html">workfinder_v1</a></li>
+        <li>here</li>
+      </ol>
+      <!--パンくずリスト 参考:https://pote-chil.com/css-stock/ja/breadcrumb-->
+</div>
+<br>
+<!--footer-->
+<div id="footer"></div>
+
+<!-- 共通部品の読み込み -->
+<script>
+  // ヘッダーを先に読み込む
+  fetch("../../../header_f_work.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.querySelector("#header").innerHTML = data;
+      // ハンバーガーメニューのイベントを再登録
+      const menuToggle = document.getElementById('menu-toggle');
+      const sidebar = document.getElementById('sidebar');
+      if(menuToggle && sidebar) {
+        menuToggle.addEventListener('click', () => {
+          menuToggle.classList.toggle('active');
+          sidebar.classList.toggle('active');
+        });
+      }
+    });
+  // フッターを読み込む
+  fetch("../../../footer.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.querySelector("#footer").innerHTML = data;
+    });
+    function copyCode() {
+    var code = document.getElementById('mainCodeBlock').textContent;
+    navigator.clipboard.writeText(code).then(function() {
+      alert('コピーされました');
+    }, function() {
+      alert('コピーに失敗しました');
+    });
+ }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+</body>
+</html>

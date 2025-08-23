@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workfinder_v1 | Workfinder</title>
+    <link rel="website icon" type="png" href="https://pic.atserver186.jp/img/ATSERVER/icon.png">
+    <link
+    rel="stylesheet"
+    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+    crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../../style.css"><!--全ページ共通のスタイルの読み込み-->
+    <link rel="stylesheet" href="../../profile.css"><!--プロフィールページ用にスタイルの読み込み-->
+</head>
+<body>
+<!--header-->
+<div id="header"></div>
+
+<div class="container">
+  <!--ユーザー名-->
+  <div class="user_container">
+    <a href="#" class="user_link">
+      <img src="img/icon.png">
+      <span>@Workfinder</span>
+    </a>
+  </div>
+  <!--タイトル-->
+  <div class="article_title_container">
+    <h3>Workfinderの作品一覧</h3>
+  </div>
+
+  <!--記事内容-->
+
+  <main>
+    <div class="blog-card">
+    <!--以下の入力内容のようにご自身のリンクを追加してください-->
+    <img src="work1/image.png" alt="記事サムネイル">
+    <a href="work1/index.html" >
+          <div class="content">
+          <h2>workfinder_v1について</h2>
+          <p>使い方などについて解説</p>
+          <div class="Group">#workfinder</div>
+          </div>
+        </a>
+      </div>
+      <!--リンク2-->
+      <div class="blog-card">
+        <img src="https://pic.atserver186.jp/img/ATSERVER/Service/workfinder/v1/img.png" alt="記事サムネイル">
+        <a href="work2/index.html" >
+          <div class="content">
+          <h2>記事1</h2>
+          <p>見出し</p>
+          <div class="Group">#workfinder</div>
+          </div>
+        </a>
+      </div>
+      <!--リンク3-->
+      <div class="blog-card">
+        <img src="https://pic.atserver186.jp/img/ATSERVER/Service/workfinder/v1/img.png" alt="記事サムネイル">
+        <a href="work3/index.html" >
+          <div class="content">
+          <h2>記事2</h2>
+          <p>見出し</p>
+          <div class="Group">#workfinder</div>
+          </div>
+        </a>
+      </div>
+      <!--リンク4-->
+      <div class="blog-card">
+        <img src="https://pic.atserver186.jp/img/ATSERVER/Service/workfinder/v1/img.png" alt="記事サムネイル">
+        <a href="work4/index.html" >
+          <div class="content">
+          <h2>記事3</h2>
+          <p>見出し</p>
+          <div class="Group">#workfinder</div>
+          </div>
+        </a>
+      </div>
+      <!--リンク5-->
+      <div class="blog-card">
+        <img src="https://pic.atserver186.jp/img/ATSERVER/Service/workfinder/v1/img.png" alt="記事サムネイル">
+        <a href="work5/index.html" >
+          <div class="content">
+          <h2>記事4</h2>
+          <p>見出し</p>
+          <div class="Group">#workfinder</div>
+          </div>
+        </a>
+      </div>
+    </main>   
+
+    <p style="color: white;">&copy; Workfinder_v1<br>
+    作品の無断転載を禁じます</p>
+</div><!--containerのdiv終わり-->
+<br>
+<!--footer-->
+<div id="footer"></div>
+
+<!-- 共通部品の読み込み -->
+<script>
+  // ヘッダーを先に読み込む
+  fetch("../../header_f_profile.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.querySelector("#header").innerHTML = data;
+      // ハンバーガーメニューのイベントを再登録
+      const menuToggle = document.getElementById('menu-toggle');
+      const sidebar = document.getElementById('sidebar');
+      if(menuToggle && sidebar) {
+        menuToggle.addEventListener('click', () => {
+          menuToggle.classList.toggle('active');
+          sidebar.classList.toggle('active');
+        });
+      }
+    });
+  // フッターを読み込む
+  fetch("../../footer.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.querySelector("#footer").innerHTML = data;
+    });
+</script>
+
+</body>
+</html>

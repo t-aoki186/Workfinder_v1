@@ -2,7 +2,7 @@
 Workfinder_v1は、HTML,CSS,JavaScriptを使用して書かれた作品の閲覧・検索ができるHTMLファイルです。
 
 # プレビュー
-https://atserver186.jp/Service/workfinder/v1/
+https://atserver186.jp/Service/workfinder/v1/workfinder_v1/
 
 # 使い方
 <ins>ロゴ・作品等の編集</ins><br>
